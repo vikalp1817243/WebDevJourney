@@ -1,0 +1,22 @@
+body {
+    background: cyan;
+    background-color: cyan;
+}
+.Page{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #830404;
+}
+.Intro {
+    color: greenyellow;
+    font-size: 25px;
+    font-weight: bold;
+}
+.Container {
+    background-color: whitesmoke;
+    border: 2px solid black;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    
+}
