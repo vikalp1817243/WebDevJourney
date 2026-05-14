@@ -1,0 +1,78 @@
+:root {
+    --bg-primary: #121212;       /* Deep gray/black */
+    --bg-secondary: #1e1e1e;     /* Slightly lighter gray for sections */
+    --text-primary: #e0e0e0;     /* High-contrast off-white */
+    --text-muted: #a0a0a0;       /* Secondary text */
+    --accent-color: #00ffcc;     /* Controlled cyan for small highlights ONLY */
+}
+
+body{
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: monospace;
+    line-height: 1.6; /* Improves readability block spacing */
+}
+
+.heading {
+    background-color: var(--bg-secondary);
+    border-radius: 4px;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--accent-color); /* Subtle accent, not overwhelming */
+    text-align: center;
+    padding: 1rem;
+}
+
+.backDashboard{
+    margin: 15px auto;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.phase {
+    background-color: var(--bg-secondary);
+    border-radius: 4px;
+    margin: 15px auto;
+    padding: 15px;
+    max-width: 1200px;
+    font-size: 20px; /* Constrain width for readability */
+}
+h4{
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.paragraph{
+    padding: 10px;
+    font-size: 16px;
+}
+
+.arch-diagram {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.link{
+    font-size: 1rem;
+    margin: 10px;
+    padding: 10px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+footer{
+    border-radius: 4px;
+    background-color:var(--bg-secondary);
+    margin: auto;
+    color: var(--text-primary);
+    padding: 10px;
+    text-align: center;
+}

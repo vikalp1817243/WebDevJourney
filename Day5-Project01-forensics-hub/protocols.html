@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Operating Procedures</title>
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="heading"><h1>Standard Operating Procedures</h1></header>
+
+    <nav class="backDashboard">
+        <a href="./index.html" target="_blank" rel="noopener noreferrer">Back to Dashboard</a>
+    </nav>
+
+    <section class="phase">
+        <h4 >Phase 1 - Identification & Acquisition</h4>
+        <p>Isolate the target system from the network immediately to prevent remote wiping or lateral movement. Acquire volatile data (RAM) first, followed by bit-for-bit physical imaging of non-volatile storage using hardware write-blockers. Calculate and record initial cryptographic hashes (SHA-256) for all acquired images to ensure zero tampering.</p>
+    </section>
+
+    <section class="phase">
+        <h4>Phase 2 - Analysis & Extraction</h4>
+        <p>Mount forensic images strictly as read-only. Recover unlinked (deleted) files, analyze file system artifacts (MFT, registry hives), and timeline system events. Correlate network logs with host-based artifacts to trace the intrusion vector.</p>
+    </section>
+
+    <section class="phase">
+        <h4>Phase 3 - Documentation & Reporting</h4>
+        <p>Maintain a strict chain of custody document detailing every transfer of evidence. Generate a final report detailing the scope of the breach, indicators of compromise (IOCs), the timeline of events, and actionable remediation steps. Ensure all analytical findings are objectively reproducible.</p>
+    </section>
+
+    <footer>
+        <p>Copyright © 2024 Forensics Hub. All rights reserved.</p>
+        <p>Contact us at info@forensicsHub.com</p>
+    </footer>
+</body>
+</html>
