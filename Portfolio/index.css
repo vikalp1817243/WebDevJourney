@@ -3,9 +3,9 @@ body {
     background-color: cyan;
 }
 .Page{
-    font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #830404;
+    font-size: 100px;
+    font-family: monospace;
+    color: #950590;
 }
 .Intro {
     color: greenyellow;
