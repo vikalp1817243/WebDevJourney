@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Types of selector</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <h2>Parent selector</h2>
+    <div class="king"><p id="alt">
+      Parent selector is a CSS selector that allows you to select an element
+      based on its parent element. 
+    </p></div>
+    
+    <div class="queen">
+        <p class="dog">
+            This will select all <code>&lt;li&gt;</code> elements that are direct children of a <code>&lt;ul&gt;</code> element and apply the color red to them. The parent selector is useful for targeting specific elements in a nested structure without affecting other elements that may be similar but are not direct children.
+        </p>
+        <div>
+            <ol>
+                <li>
+                    border: 0.1rem solid black;
+                </li>
+                <li>
+                    padding: 0.1rem;
+                </li>
+                
+            </ol>
+        </div>
+    </div>
+  </body>
+</html>
