@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading Inheritance & Specificity</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<main>
+    <article>
+    <section class="panel">
+        <h1>Cascading Inheritance & Specificity</h1>
+        <p class="text-center">In this project, we will explore the concepts of Cascading Inheritance and Specificity.</p>
+    </section>
+    <section class="panel">
+        <h3>Cascading Inheritance</h3>
+        <p>Cascading Inheritance is a fundamental concept in which certain CSS properties are passed down from parent
+            elements to their child elements. This means that if you set a property on a parent element, the child
+            elements will also inherit that property unless they have their own specific styles defined.</p>
+    </section>
+    <section class="panel">
+        <h3>CSS Specificity</h3>
+        <p>CSS specificity is a set of rules that determine which CSS rule will be applied to an element when there are
+            multiple conflicting rules. The specificity of a CSS rule is calculated based on the types of selectors used
+            in the rule. The more specific a selector is, the higher its specificity, and it will take precedence over
+            less specific selectors.</p>
+        <p>For example, an ID selector has a higher specificity than a class selector, and a class selector has a higher
+            specificity than an element selector. If there are conflicting styles, the rule with the highest specificity
+            will be applied to the element.</p>
+    </section>
+    <section class="panel">
+        <h3>Types of Selectors</h3>
+        <p>There are several types of CSS selectors, each with their own level of specificity:</p>
+        <ol>
+            <li>
+                <strong>Element selectors</strong>
+                <p>Element selectors target HTML elements directly.Element selectors have the lowest specificity.</p>
+            </li>
+            
+            <li>
+                <strong>Class selectors</strong>
+                <p>Class selectors target elements with a specific class attribute.Class selectors have a higher specificity
+                    than element selectors.</p>
+            </li>
+            <li>
+                <strong>ID selectors</strong>
+                <p>ID selectors target elements with a specific ID attribute.ID selectors have the highest specificity.</p>
+            </li>
+        </ol>
+    </section>
+    <section class="panel">
+        <h3>Rules of Specificity</h3>
+        <p>When multiple CSS rules apply to the same element, the rule with the highest specificity will be applied. If
+            two
+            rules have the same specificity, the one that appears last in the CSS will take precedence.</p>
+    </section>
+    <section class="panel">
+        <h4>The broad categories are:</h4>
+        <ol>
+            <li>
+                <h5>Position</h5>
+                <p>In this case what matters is the order in which the styles are defined. The example code is given
+                    below:
+                <pre><code>
+                        .my-class {
+                            color: blue;
+                            color: red;
+                        }
+                    </code></pre>
+                So in the above example, the color will be red because it appears last.
+                </p>
+            </li>
+
+
+            <li>
+                <h5>Specificity</h5>
+                <p>It follows a precedence -> Element selectors have the lowest specificity, followed by class
+                    selectors, attribute selectors, and then ID selectors(highest).</p>
+                <ul>
+                    <li>Element selectors
+                        <pre><code>
+                                h1 {
+                                    color: green;
+                                }
+                            </code></pre>
+                    </li>
+
+                    <li>Class selectors
+                        <pre><code>
+                            .my-class {
+                                color: blue;
+                            }
+                        </code></pre>
+                    </li>
+
+                    <li>Attribute selectors
+                        <pre><code>
+                            li[draggable] {
+                                color: orange;
+                            }
+                        </code></pre>
+                    </li>
+
+                    <li>ID selectors
+                        <pre><code>
+                            #my-id {
+                                color: red;
+                            }
+                        </code></pre>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <h5>Type</h5>
+                <p>The CSS follows a specific order of precedence. First, External stylesheets, then Internal
+                    stylesheets, and finally Inline styles. Given below is an example:</p>
+                <ul>
+                    <li><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></li>
+                    <li><code>&lt;style&gt;&lt;/style&gt;</code></li>
+                    <li><code>&lt;h1 style="color: blue;"&gt;Inline style&lt;/h1&gt;</code></li>
+                </ul>
+            </li>
+
+
+            <li>
+                <h5>Importance</h5>
+                <p>The !important declaration can override other rules regardless of specificity.
+                    Example:
+                <pre><code>
+                            .my-class {
+                                color: blue;
+                                color: red !important;
+                            }
+                        </code></pre>
+                </p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="panel">
+        <p>In conclusion, you should consider all four factors when determining which CSS rules apply to an element.</p>
+    </section>
+
+    <section class="panel">
+        <p>Check the image below: Position (low) to Importance (high)</p>
+        <img src="./image.png" alt="Specificity Example">
+        <p id="disclaimer">Disclaimer: I own the copyright for the image. It belongs to its respective owner.</p>
+    </section>
+</article>
+</main>
+</body>
+
+</html>
