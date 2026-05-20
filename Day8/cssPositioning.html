@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>CSS Positioning</h1>
+        <p>CSS positioning allows you to control the layout of elements on a webpage.</p>
+    </main>
+    <section>
+        <h2>Types of CSS Positioning</h2>
+        <p>There are several types of CSS positioning that you can use to control the layout of your webpage:</p>
+        <ul>
+            <li>Static Positioning</li>
+            <li>Relative Positioning</li>
+            <li>Absolute Positioning</li>
+            <li>Fixed Positioning</li>
+            <li>Sticky Positioning</li>
+        </ul>
+    </section>
+
+    <main>
+        <article>
+            <section>
+                <h4>Static Positioning</h4>
+                <p>Static positioning is the default position for all elements. It means that the element will be
+                    positioned according to the normal flow of the document.</p>
+                <p>Let's look at an example using code. Lets start with html code:</p>
+                <pre>
+                    &lt;div class="static"&gt;
+                        &lt;p&gt;This is a static element&lt;/p&gt;
+                    &lt;/div&gt;
+                </pre>
+                <pre>
+                    .static {
+                        position: static;
+                    }
+                </pre>
+            </section>
+
+            <section>
+                <h4>Relative Positioning</h4>
+                <p>This is most commonly used. Relative positioning allows you to position an element relative to its
+                    normal position. You can use the "top", "right", "bottom", and "left" properties to specify the
+                    offset from its normal position.</p>
+                <p>You wonder why this is useful? Well, it allows you to fine-tune the position of an element without
+                    affecting the layout of other elements.</p>
+                <p>Look at the following example:</p>
+                <pre>
+                    .relative {
+                        position: relative;
+                        top: 10px;
+                        left: 10px;
+                    }
+                </pre>
+                <p><strong>Note: Here relative doesnt means relative another other element. it means relative to its
+                        normal position where it was supposed to be.</strong></p>
+            </section>
+
+            <section>
+                <h4>Absolute Positioning</h4>
+                <p>Absolute positioning allows you to position an element relative to its nearest positioned ancestor.
+                    If there is no positioned ancestor, it will be positioned relative to the initial containing block
+                    (usually the viewport).</p>
+                <p> lets look at an example:</p>
+                <pre><code>
+                    &lt;div class="relative"&gt;
+                        &lt;div class="absolute"&gt;
+                            &lt;p&gt;This is an absolute element&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                </code></pre>
+                <pre>
+                    .absolute {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                    }
+                </pre>
+                <p>In the above example, the element with the class "absolute" will be positioned 10 pixels from the top
+                    and 10 pixels from the left of its <strong>nearest positioned ancestor</strong> or next positioned
+                    parent.</p>
+                <p><strong>Note: Absolute positioning removes the element from the normal flow of the document.</strong>
+                </p>
+                <p>Another benefit of absolute positioning is that it allows you to create complex layouts with
+                    overlapping elements. Kown as z-index.</p>
+                <p><strong>Note: The z-index property controls the stacking order of elements. Elements with a higher
+                        z-index value will be displayed on top of elements with a lower z-index value.</strong></p>
+                <p>See the <a href="zIndex.html">z-index</a> section for more information.</p>
+            </section>
+
+            <section>
+                <h4>Fixed Positioning</h4>
+                <p>Fixed positioning allows you to position an element relative to the viewport. This means that the
+                    element will stay in the same position even when the page is scrolled.</p>
+                <p>Look at the html example code</p>
+                <pre>
+                    &lt;div class="fixed"&gt;
+                        &lt;p&gt;This is a fixed element&lt;/p&gt;
+                    &lt;/div&gt;
+                </pre>
+                <pre>
+                    .fixed {
+                        position: fixed;
+                        top: 10px;
+                        left: 10px;
+                    }
+                </pre>
+                <p>In the above example, the element with the class "fixed" will be positioned 10 pixels from the top
+                    and 10 pixels from the left of the viewport, and it will remain in that position even when the page
+                    is scrolled.</p>
+                <p><strong>Note: Fixed positioning is often used for navigation menus or other elements that should
+                        remain visible while the rest of the page is scrolled.</strong></p>
+            </section>
+
+            <section>
+                <h4>Sticky Positioning</h4>
+                <p>Sticky positioning allows you to position an element based on the user's scroll position. The element
+                    will toggle between relative and fixed positioning depending on the scroll position.</p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

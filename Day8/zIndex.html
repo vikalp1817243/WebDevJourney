@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <h1>Z-Index</h1>
+        <p>The z-index property controls the stacking order of elements. Elements with a higher z-index value will be displayed on top of elements with a lower z-index value.</p>
+    </main>
+    <section>
+        <h2>How Z-Index Works</h2>
+        <p>Z-index only works on elements that have a position value of relative, absolute, fixed, or sticky. The default z-index value is 0. If two elements have the same z-index value, the one that appears later in the HTML code will be displayed on top.</p>
+        <p>Look at the example below:</p>
+        <pre>
+            .element1 {
+                position: relative;
+                z-index: 1;
+            }
+            .element2 {
+                position: relative;
+                z-index: 2;
+            }
+        </pre>
+        <p>In the above example, element2 will be displayed on top of element1 because it has a higher z-index value.</p>
+    </section>
+    
+</body>
+</html>

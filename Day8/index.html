@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combining CSS Selectors</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main class="Heading Paragraph">
+        <h1>Combining CSS Selectors</h1>
+        <p>It is a method of selecting and applying styles to HTML elements using multiple CSS selectors. </p>
+    </main>
+    <section class ="Resources">
+        <h2>Contents</h2>
+        <ul>
+            <li><a href="./cssPositioning.html">CSS Positioning</a></li>
+            <li><a href="./zIndex.html">Z-Index</a></li>
+            <li><a href="./demo.html">Positioning & Z-Index Demo: Created using AI to give visual representation.</a></li>
+        </ul>
+    </section>
+    <article class="content">
+        <section>
+            <div><h4>Group Selectors</h4></div>
+            <p>Group selectors allow you to apply the unique styles to multiple elements at once. In order to do so multiple class names can be specified in the tags. <code></code>separated by commas.</p>
+            <pre>
+                .class1, .class2 {
+                    color: red;
+                }
+            </pre>
+            <p>In the above example, both elements with the class "class1" and "class2" will have their text color set to red.</p>``
+        </section>
+
+        <section>
+            <div><h4>Child selectors</h4></div>
+            <p>Child selectors allow you to target elements that are direct children of a specific parent element. This is done by using the ">" symbol between the parent and child selectors.</p>
+            <p>Look at the following example of html code:</p>
+            <pre>
+                &lt;div class="parent-class"&gt;
+                    &lt;p&gt;This is a direct child 1&lt;/p&gt;
+                    &lt;div&gt;
+                        &lt;p&gt;This is not a direct child&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p&gt;This is a direct child 2&lt;/p&gt;
+                &lt;/div&gt;
+            </pre>
+            <p>
+                In the above example, there are two paragraph elements that are direct children of the div with the class "parent-class", and one paragraph element that is nested within another div. If we apply the following CSS selector:
+            </p>
+            <pre>
+                .parent-class > p{
+                    color: blue;
+                }
+            </pre>
+            <p>In the above example, only the paragraph elements that are direct children( <strong>only one level down</strong>) of an element with the class "parent-class" will have their text color set to blue.</p>
+        </section>
+
+        <section>
+            <div><h4>Descendent selectors</h4></div>
+            <p>Descendent selectors allow you to target elements that are nested within other elements. This is done by using a space between the parent and child selectors. It can go multiple levels deep.</p>
+            <p>Look at the following example of html code:</p>
+            <pre>
+                &lt;div class="outer-class"&gt;
+                    &lt;div class="inner-class"&gt;
+                        &lt;p&gt;This is a descendent&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </pre>
+            <p>In the above example, the paragraph element with the class "inner-class" will have its text color set to red.</p>
+            <pre>
+                .inner-class p{
+                    color: red;
+                }
+            </pre>
+            <p>In the above example, the paragraph element with the class "inner-class" will have its text color set to red.</p>
+        </section>
+
+        <section>
+            <div><h4>Chain Selectors</h4></div>
+            <p>Chain selectors allow you to target elements that have multiple classes applied to them. This is done by concatenating the class names without any spaces. Note that the order of the classes in the selector does not matter. Also they should follow theri own intialisation rules. Like .class#id.class{} is an example of a chain selector. Note the use of the hash symbol to target an element with a specific ID.</p>
+            <p>Look at the html code:</p>
+            <pre>
+                &lt;div class="class1 class2"&gt;
+                    This element has both class1 and class2
+                &lt;/div&gt;
+            </pre>
+            <pre>
+                .class1.class2 {
+                    color: green;
+                }
+            </pre>
+            <p>In the above example, only elements that have both the "class1" and "class2" classes will have their text color set to green.</p>
+        </section>
+    </article>
+</body>
+</html>
