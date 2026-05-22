@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #a12600;
+    --secondary-color: #c4ecc6;
+    --background-color: #5dbfc8;
+    --text-color: #333333;
+    --border-radius: 5px;
+    --font-family: Times New Roman, serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: auto;
+    padding: 20px;
+}
+
+h4 {
+    color: rgb(0, 2, 128);
+    font-family: 'Calibri', sans-serif;
+    font-weight: bold;
+}
+
+.block-demo {
+    display: block;
+    width: 200px;
+    height: 100px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.inline-demo {
+    display: inline;
+    width: 200px;
+    /* This will not work for inline elements */
+    height: 100px;
+    /* This will not work for inline elements */
+    background-color: var(--primary-color);
+    /* The background color will only be visible around the text content, not as a full box */
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding: 10px;
+    /* The padding will add space around the text, but the element will still only take up as much width as necessary */
+    border-radius: var(--border-radius);
+
+}
+
+.inline-block-demo {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.none-demo {
+    display: none;
+}
+
+.main,
+.section,
+nav {
+    background-color: var(--secondary-color);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    padding-left: 20px;
+}
+
+.main {
+    margin: 20px auto;
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+.main-heading {
+    color: var(--primary-color);
+    font-family: 'Calibri', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#nav {
+    text-align: center;
+    color: black;
+    border-radius: var(--border-radius);
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.display-types {
+    list-style-type: square;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#demo-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: rgb(252, 252, 252);
+    color: rgb(39, 13, 207);
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+}
+
+.inline {
+    color: rgb(201, 21, 21);
+    /* The padding will add space around the text, but the element will still only take up as much width as necessary */
+    margin-left: 10px;
+    width: 600px;
+    /* This will not work for inline elements */
+}
+
+.inline-code {
+    display: inline;
+    padding: 10px;
+}
+
+.inline-block-code {
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.inline-block-css {
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+}
+
+.float-left{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+footer{
+    clear: both;
+}

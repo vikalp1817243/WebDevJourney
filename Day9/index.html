@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Display</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="main">
+        <h1 class="main-heading">CSS Display</h1>
+        <p>CSS display is a property that determines how an element is displayed on a webpage. It can be used to control
+            the layout and visibility of elements.</p>
+    </main>
+    <section class="section">
+        <h3>Types of CSS Display</h3>
+        <p>There are several types of CSS display that you can use to control the layout of your webpage:</p>
+        <ul class="display-types">
+            <li>Block</li>
+            <li>Inline</li>
+            <li>Inline-block</li>
+            <li>None</li>
+        </ul>
+
+    </section>
+
+    <section class="section">
+        <h4>1. Block Display</h4>
+        <p>Block display is the default display for most elements. It means that the element will take up the full width
+            of its container and will start on a new line.</p>
+        <p>Let's look at an example using code. Lets start with html code:</p>
+        <code>
+            &lt;div class="block"&gt;
+                &lt;p&gt;This is a block element&lt;/p&gt;
+            &lt;/div&gt;
+        </code>
+        <pre>
+            .block {
+                display: block;
+            }
+        </pre>
+    </section>
+
+    <section class="section">
+        <h4>2. Inline Display</h4>
+        <p>Inline display means that the element will only take up as much width as necessary and will not start on a
+            new
+            line.</p>
+        <p>Look at the following example:</p>
+        <div class="inline">
+            <code class="inline-code" >
+                1. Hello, this is an inline element.
+                2. Hello, this is an inline element.
+            </code>
+        </div>
+
+        <pre class="inline-code">
+            .inline {
+                display: inline;
+            }
+        </pre>
+        <p><strong>Note:</strong>You cannot set the height and width of these elements beacuse they are default to thesize of content. Also since you cannot apply this property to div elements because they are block-level elements. When you set a div to display: inline, it stops behaving like a box. Inline elements ignore width
+            and height, so if the element is empty, it has almost no painted area, which makes the background color look like it is not applied. The background only becomes visible around actual content or padding. If you want it to show as a colored box, use display: inline-block or display: block. If you want it to stay inline, add content or padding.</p>
+    </section>
+
+    <section class="section">
+        <h4>3. Inline-Block Display</h4>
+        <p>This display type combines the properties of both block and inline elements. It allows you to set the height
+            and width of the element while still allowing it to sit inline with other elements.</p>
+        <p>Look at the following example:</p>
+        <p class="inline-block-code">
+            <code>
+                1. This is an inline-block element.
+                2. This is an inline-block element.
+            </code>
+        </p>
+        <p class="inline-block-css">
+            .inline-block {
+                display: inline-block;
+            }
+        </p>
+    </section>
+
+    <section class="section">
+        <h4>4. None Display</h4>
+        <p>None display means that the element will not be displayed on the webpage. It will not take up any space and
+            will not be visible to the user.</p>
+        <p>Look at the following example:</p>
+        <code>
+            .none {
+                display: none;
+            }
+        </code>
+    </section>
+
+    <nav id="nav">
+        <p> Here is the link to demopage: <a id="demo-link" href="demo.html">Demo Page</a></p>
+        <p> Here is the link to float page: <a id="float-link" href="float.html">Float Page</a></p>
+    </nav>
+
+</body>
+
+</html>

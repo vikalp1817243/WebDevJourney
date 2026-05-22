@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main class="main">
+        <h1 class="main-heading">Float</h1>
+        <p>Float is a CSS property that allows you to position an element to the left or right of its container, allowing other content to flow around it.</p>
+    </main>
+    <section class="section">
+        <h2>Types of Float</h2>
+        <p>There are three values for the float property:</p>
+        <ul>
+            <li>Left: The element will float to the left of its container.</li>
+            <li>Right: The element will float to the right of its container.</li>
+            <li>None: The element will not float and will be displayed in the normal flow of the document.</li>
+        </ul>
+        <p>Let's look at an example using code. Let's start with HTML code:</p>
+        <code>
+            &lt;div class="float-left"&gt;
+                &lt;p&gt;This element is floated to the left.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="float-right"&gt;
+                &lt;p&gt;This element is floated to the right.&lt;/p&gt;
+            &lt;/div&gt;
+        </code>
+        <pre>
+            .float-left {
+                float: left;
+            }
+            .float-right {
+                float: right;
+            }
+        </pre>
+    </section>
+
+    <section class="section">
+        <img src="./assets/mozilla.jpeg" alt="Mozilla Firefox Logo" class="float-left">
+        <p>
+            Mozilla firefox logo is floated to the left, and the text is flowing around it. This is an example of how the float property works in CSS.
+        </p>
+        <footer>
+            Copyright © 2024 Vikalp's Web Development Journey. All rights reserved.
+        </footer>
+    </section>
+</body>
+</html>
