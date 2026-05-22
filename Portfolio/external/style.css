@@ -1,0 +1,67 @@
+:root{
+    --primary-color: #ccd5aeff; /* Primary color */
+    --secondary-color: #e9edc9ff; /* Secondary color */
+    --light-background: #fefae0ff; /* Light background */
+    --accent-color: #faedcdff; /* Accent color */
+    --dark-accent: #d4a373ff; /* Text/Dark accent */
+}
+body{
+    background-color: var(--light-background);
+    color: var(--dark-accent);
+    font-family: Monospace, serif;
+}
+header{
+    color: var(--dark-accent);
+    padding: 20px;
+}
+header h1{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+header nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+section{
+    background-color: var(--secondary-color);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.hero img{
+    float: left;
+    width: 12%;
+    height: auto;
+    border-radius: 10px;
+}
+.bio{
+    height: auto;
+    padding: 10px;
+    margin-left: 20px;
+}
+.projects{
+    clear:both;
+}
+.cards{
+    display: inline-block;
+    background-color: var(--accent-color);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: auto;
+}
+li{
+    display: inline;
+    margin-right: 10px;
+}
+
+footer{
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
