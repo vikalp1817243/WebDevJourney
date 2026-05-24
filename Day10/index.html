@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website 01</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ways of creating responsive websites</h1>
+        <p>Responsive design is an approach to web design that makes web pages render well on a variety of devices and
+            window or screen sizes.</p>
+        <p>There are several ways to create responsive websites, including:</p>
+        <ul>
+            <li>Media Queries</li>
+            <li>Css Grid</li>
+            <li>Css Flex</li>
+            <li>Css Framework: Bootstrap</li>
+        </ul>
+    </header>
+    <nav>
+        <a href="./demo.html" title="Demo-site">Demo Site</a>
+    </nav>
+    <section>
+        <h2>Media Queries</h2>
+        <p>Media queries are a powerful tool in CSS that allow you to apply different styles to a webpage based on the characteristics of the device or screen size. They are commonly used to create responsive designs that adapt to different screen sizes and orientations.</p>
+        <p>Media queries work by using the @media rule in CSS, which allows you to specify different styles for different media types (such as screen, print, or speech) and conditions (such as width, height, or orientation).</p>
+        <p>For example, you can use a media query to apply different styles for screens that are less than 600 pixels wide:</p>
+        <pre><code>@media (max-width: 600px) {
+            /* Styles for screens less than 600px wide */
+            body {
+                background-color: lightblue;
+            }
+        }</code></pre>
+
+        <p>In this example, the background color of the body will change to light blue when the screen width is less than 600 pixels. You can also use media queries to apply different styles for different orientations (such as portrait or landscape) or to target specific devices (such as smartphones or tablets).</p>
+    </section>
+
+    <section>
+        <h2>CSS Grid</h2>
+        <p>CSS Grid is a powerful layout system in CSS that allows you to create complex and responsive grid-based layouts.
+        It provides a two-dimensional grid system that can be used to define rows and columns, making it easier to
+        create responsive designs that adapt to different screen sizes.</p>
+        <p>With CSS Grid, you can define the structure of your layout using grid containers and grid items. You can specify the number of rows and columns, as well as the size and position of each item within the grid.</p>
+        <p>For example, you can create a simple responsive grid layout with three columns that adjust based on the screen  size:</p>
+        <pre><code>.container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }</code></pre>
+        <p>In this example, the grid will automatically adjust the number of columns based on the available space, with aminimum column width of 200 pixels and a maximum of 1 fraction of the available space. This allows the layout to adapt to different screen sizes, making it responsive.</p>
+    </section>
+
+    <section>
+        <h2>CSS Flexbox</h2>
+        <p>CSS Flexbox is a layout module in CSS that provides a flexible way to arrange and align items within a
+            container. It is designed to help create responsive layouts that adapt to different screen sizes and
+            orientations.</p>
+        <p>With Flexbox, you can define a flex container and specify how the items within it should be arranged and
+            aligned. You can control the direction of the items (row or column), their wrapping behavior, and their
+            alignment along the main and cross axes.</p>
+        <p>For example, you can create a simple responsive flexbox layout with three items that adjust based on the
+            screen size:</p>
+        <pre><code>.container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .item {
+        flex: 1 1 200px;
+        }</code></pre>
+        <p>In this example, the flex container will wrap the items to the next line if there is not enough space, and each item will have a flexible width that allows it to grow and shrink based on the available space, with a minimum width of 200 pixels. This allows the layout to adapt to different screen sizes, making it responsive.</p>
+    </section>
+
+    <section>
+    <h2>CSS Framework: Bootstrap</h2>
+    <p>Bootstrap is a popular CSS framework that provides a collection of pre-designed components and styles for building responsive websites. It includes a grid system, responsive utilities, and a wide range of UI components that can be easily customized to create responsive designs.</p>
+    <p>Bootstrap's grid system is based on a 12-column layout, which allows you to create responsive layouts by specifying how many columns each element should span at different screen sizes. For example, you can create a responsive layout with three columns that adjust based on the screen size:</p>
+    <pre><code>&lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-sm-4"&gt;Column 1&lt;/div&gt;
+            &lt;div class="col-sm-4"&gt;Column 2&lt;/div&gt;
+            &lt;div class="col-sm-4"&gt;Column 3&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code></pre>
+    <p>In this example, each column will span 4 columns on small screens (sm) and will adjust based on the screen size,  making the layout responsive. Bootstrap also provides a wide range of responsive utilities that allow you to  show or hide elements based on the screen size, making it easier to create responsive designs.</p>
+    </section>
+</body>
+</html>

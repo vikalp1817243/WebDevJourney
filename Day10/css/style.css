@@ -1,0 +1,65 @@
+:root{
+    --primary-color: #ccd5aeff; /* Primary color */
+    --secondary-color: #e9edc9ff; /* Secondary color */
+    --light-background: #fefae0ff; /* Light background */
+    --accent-color: #faedcdff; /* Accent color */
+    --dark-accent: #d4a373ff; /* Text/Dark accent */
+}
+
+body{
+    background-color: var(--light-background);
+    color: var(--dark-accent);
+    font-family: Monospace, serif;
+    font-size: 1.5rem;
+}
+header{
+    color: var(--dark-accent);
+    padding: 20px;
+}
+header h1{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+h2{
+    color: var(--dark-accent);
+}
+p{
+    line-height: 1.6;
+    font-size: 1.25rem;
+}
+@media (max-width: 600px) {
+    p{
+        font-size: 1.1rem;
+    }
+}
+section{
+    background-color: var(--secondary-color);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#demo
+{
+    background-color: var(--light-background);
+}
+@media (min-width: 319px) and (max-width: 480px) {
+    #demo{
+        background-color: lightsalmon;
+    }
+}
+@media (min-width: 481px) and (max-width: 1200px) {
+    #demo{
+        background-color: powderblue;
+    }
+}
+@media (min-width: 1201px) and (max-width: 1600px) {
+    #demo{
+        background-color: limegreen;
+    }
+}
+@media (min-width: 1601px) {
+    #demo{
+        background-color: seagreen;
+    }
+}
