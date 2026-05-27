@@ -1,0 +1,121 @@
+:root{
+    --primary-color: #8E1616;
+    --secondary-color: #D84040;
+    --text-color: #1D1616;
+    --background-color: #cddfec;
+    --font-family: 'Monospace', monospace;
+}
+*, *::before, *::after {
+    box-sizing: border-box; 
+}
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+/* Clearfix for the header since logo is floated */
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.logo {
+    float: left;
+    width: 50px;
+    height: auto;
+}
+
+nav{
+    padding: 10px;
+}
+nav h1{
+    background-color: var(--secondary-color);
+    padding: 10px;
+    width: 200px;
+}
+nav a{
+    display: block;
+    background-color: #0598ab;
+    border-radius: 5px;
+    width: 100px;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+section{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+footer{
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.main {
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center; /* Centers the inline-block cards */
+}
+.card{
+    display: inline-block;
+    vertical-align: top; /* Aligns cards to the top of the row */
+    width: 48%; /* Takes up slightly less than half to allow for margins/spacing */
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px;
+    margin: 1%;
+    border-radius: 5px;
+    text-align: left; /* Resets text alignment inside the card */
+}
+.tile-image{
+    float: left;
+    width: 150px;
+    height: auto;
+    margin-right: 15px; /* Gives breathing room between image and text */
+}
+.card-title{
+    margin-top: 0;
+}
+/* Clearfix for cards to contain floated images */
+.card::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 3. MOBILE LAYOUT (Media Query) */
+@media (max-width: 768px) {
+    .logo {
+        width: 80px;
+        float: none; /* Remove float on mobile to center it */
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+    
+    .card {
+        display: block; /* Stack vertically */
+        width: 100%; /* Take full width */
+        margin: 10px 0;
+    }
+
+    .tile-image {
+        float: none; /* Remove float for stacked design on very small screens */
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+}
