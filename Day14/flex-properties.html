@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Properties</title>
+</head>
+<body>
+    <header>
+        <h1>Flex Properties</h1>
+    </header>
+    <section>
+        <h2>List of flex properties</h2>
+        <p>Here is a list of the most commonly used flex properties in details:</p>
+    </section>
+    <section>
+        <h3>order</h3>
+        <p>The order property controls the order of flex items. It accepts a positive or negative integer value, with the default value being 0. Items with a lower order value will be displayed before items with a higher order value.</p>
+    </section>
+    <section>
+        <h3>flex-direction</h3>
+        <p>The flex-direction property controls the direction of the flex container. It accepts four values: row, row-reverse, column, and column-reverse. The default value is row, which means that the flex items will be displayed in a horizontal row. The row-reverse value will  display the items in a horizontal row but in reverse order. The column value will display the items in a vertical column, and the column-reverse value will display the items in a vertical column but in reverse order.</p>
+    </section>
+    <section>
+        <h3>flex-wrap</h3>
+        <p>The flex-wrap property controls whether flex items wrap or not. It accepts three values: nowrap, wrap, and wrap-reverse. The default value is nowrap, which means that the flex items will not wrap and will be displayed in a single line. The wrap value will allow the flex items to wrap onto multiple lines if necessary, while the wrap-reverse value will allow the items to wrap onto multiple lines but in reverse order.</p>
+        <p>This property is applied on the parent container not on the child items</p>
+    </section>
+    <section>
+        <h3>flex-flow</h3>
+        <p>The flex-flow property is a shorthand for the flex-direction and flex-wrap properties. It accepts two values: the first value is for flex-direction and the second value is for flex-wrap. For example, flex-flow: row wrap; will set the flex-direction to row and the flex-wrap to wrap.</p>
+    </section>
+    <section>
+        <h3>flex-grow</h3>
+        <p>The flex-grow property controls how much a flex item can grow relative to the other flex items in the container. It accepts a positive integer value, with the default value being 0. A value of 0 means that the item will not grow, while a value of 1 means that the item can grow to fill the available space in the container. If multiple items have a flex-grow value greater than 0, they will share the available space proportionally based on their flex-grow values.</p>
+    </section>
+    <section>
+        <h3>flex-shrink</h3>
+        <p>The flex-shrink property controls how much a flex item can shrink relative to the other flex items in the container. It accepts a positive integer value, with the default value being 1. A value of 0 means that the item will not shrink, while a value of 1 means that the item can shrink to fit the available space in the container. If multiple items have a flex-shrink value greater than 0, they will shrink proportionally based on their flex-shrink values.</p>
+    </section>
+    <section>
+        <h3>flex-basis</h3>
+        <p>The flex-basis property controls the initial size of a flex item before any available space is distributed. It accepts a length value (e.g., 100px) or a percentage value (e.g., 50%). The default value is auto, which means that the size of the item will be based on its content. If a specific size is set using flex-basis, the item will start with that size before any growing or shrinking occurs.</p>
+    </section>
+    <section>
+        <h3>justify-content</h3>
+        <p>The justify-content property controls the alignment of flex items along the main axis (the direction defined by flex-direction). It accepts several values, including flex-start (default), flex-end, center, space-between, space-around, and space-evenly. The flex-start value will align the items to the start of the container, while the flex-end value will align them to the end. The center value will align the items in the center of the container. The space-between value will distribute the items evenly with the first item at the start and the last item at the end of the container. The space-around value will distribute the items evenly with equal space around them, while the space-evenly value will distribute the items evenly with equal space between them.</p>
+    </section>
+    <section>
+        <h3>align-items</h3>
+        <p>The align-items property controls the alignment of flex items along the cross axis (perpendicular to the main axis). It accepts several values, including stretch (default), flex-start, flex-end, center, and baseline. The stretch value will stretch the items to fill the container along the cross axis(y-axis), while the flex-start value will align them to the start of the cross axis. The flex-end value will align them to the end of the cross axis, and the center value will align them in the center of the cross axis. The baseline value will align the items along their baseline.</p>
+
+        <p>align-self is another property that can be applied to individual flex items to override the align-items value for that specific item.</p>
+    </section>
+    <section>
+        <h3>align-content</h3>
+        <p>The align-content property controls the alignment of flex lines along the cross axis when there are multiple lines of flex items. It accepts several values, including stretch (default), flex-start, flex-end, center, space-between, space-around, and space-evenly. The stretch value will stretch the lines to fill the container along the cross axis, while the flex-start value will align them to the start of the cross axis. The flex-end value will align them to the end of the cross axis, and the center value will align them in the center of the cross axis. The space-between value will distribute the lines evenly with the first line at the start and the last line at the end of the container. The space-around value will distribute the lines evenly with equal space around them, while the space-evenly value will distribute the lines evenly with equal space between them.</p>
+        <p>Note: this property only has an effect when there are multiple lines of flex items. and when flex-wrap is set to wrap.</p>
+    </section>
+
+    <section>
+        <h3>Difference between align-items and align-content</h3>
+        <table>
+            <tr>
+                <th>align-items</th>
+                <th>align-content</th>
+            </tr>
+            <tr>
+                <td>Controls the alignment of flex items along the cross axis.</td>
+                <td>Controls the alignment of flex lines along the cross axis when there are multiple lines of flex items.</td>
+            </tr>
+            <tr>
+                <td>Applies to individual flex items.</td>
+                <td>Applies to the entire flex container when there are multiple lines of flex items.</td>
+            </tr>
+            <tr>
+                <td>Has an effect regardless of the number of lines of flex items.</td>
+                <td>Only has an effect when there are multiple lines of flex items and when flex-wrap is set to wrap.</td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
