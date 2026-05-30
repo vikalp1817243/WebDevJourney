@@ -1,0 +1,67 @@
+:root{
+    --background-color: #D2C1B6;
+    --primary-color: #1B3C53;
+    --secondary-color: #234C6A;
+    --accent-color: #456882;
+}
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    font-family: "Playwrite GB J", cursive;
+}
+
+.header{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    
+}
+.header .header-title{
+    font-size: 3em;
+    margin: 0;
+}
+.header-description{
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: var(--accent-color);
+}
+.section {
+    border: 1px solid var(--accent-color);
+    margin: 5px ;
+    padding: 5px;
+    background-color: var(--accent-color);
+}
+.tiles{
+    display: flex;
+    gap: 20 px;
+    width: 100%;
+}
+.section-title{
+    font-size: 2em;
+    color: var(--background-color);
+}
+.flex-container{
+    display: flex;
+    flex-basis: 200px;
+    gap: 10px;
+}
+.card{
+    background-color: var(--secondary-color);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+   
+    flex-basis: auto; /* Default value, the size is based on the content */
+    /*below are default values, but we will explicitly set them to understand the behavior*/    
+    flex-grow: 0; /* Do not grow */
+    flex-shrink: 1; /* Allow shrinking */
+}
+#priority{
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}

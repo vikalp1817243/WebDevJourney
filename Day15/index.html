@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./external/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+    <title>Flex</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header-title">Flex-sizing</h1>
+        <p class="header-description">Flex items can be sized using the flex property, which is a shorthand for
+            flex-grow, flex-shrink, and flex-basis. The flex property allows you to specify how much a flex item should
+            grow or shrink relative to the other items in the container. and it should behave in responsive situation.
+        </p>
+    </header>
+    <section class="tiles">
+        <section class="section">
+        <h3 class="section-title">Let look at cenario</h3>
+        <p class="section-description">Lets we have 4 paragrah emelments on page without any css. They will normally
+            display in a row according to their content size.</p>
+        <p class="section-description">if those paragraph elements are placed inside a flex container, their sizing
+            behavior will be different and by default they lie on x-axis wihtout any space</p>
+        <p class="section-description">Browser behavior look at the follwoing priorty oder givne below</p>
+    </section>
+    <section class="section">
+        <p class="section-title">Lets look at the priority list:</p>
+        <p id="priority">Content < Width < flex-basis < min-width/max-width</p>
+        <p class="section-description">In this order, the browser will apply each constraint to determine the
+        final size of the flex item.</p>
+    </section>
+    </section>
+    
+    <section class="section">
+        <h3 class="section-title">lets Look at the example</h3>
+        <div class="flex-container">
+            <p class="card home">Home</p>
+            <p class="card about">About</p>
+            <p class="card services">Services</p>
+            <p class="card contact">Contact</p>
+            <p class="card blog">Blog</p>
+            <p class="card programming">Best Programming series in the world</p>
+        </div>
+    </section>
+</body>
+
+</html>
