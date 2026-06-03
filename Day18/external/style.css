@@ -1,0 +1,29 @@
+.grid-container {
+  display: grid;
+  /* background-color: #2196F3;
+  border: 1px solid #000; */
+  /* grid-template: 100px 200px 100px / 100px 200px 100px; */
+  /* grid-template-rows: 100px auto 200px;
+  grid-template-columns: 100px auto 500px; */
+
+  /* ratios sizing */
+  /* grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 2fr; */
+
+  /* horizontal responsiveness */
+  /* grid-template-rows: 100px 200px; */
+  /* remove the comma — commas are invalid between track sizes */
+  /* grid-template-columns: 100px minmax(100px, 1fr); */
+
+  /*Repeat property*/
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+}
+.grid-item {
+  background-color: rgba(173, 17, 17, 0.8);
+  border: 1px solid #000;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
