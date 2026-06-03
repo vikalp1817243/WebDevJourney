@@ -7,8 +7,17 @@
   grid-template-columns: 100px auto 500px; */
 
   /* ratios sizing */
-  grid-template-rows: 1fr 2fr;
-  grid-template-columns: 1fr 2fr;
+  /* grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 2fr; */
+
+  /* horizontal responsiveness */
+  /* grid-template-rows: 100px 200px; */
+  /* remove the comma — commas are invalid between track sizes */
+  /* grid-template-columns: 100px minmax(100px, 1fr); */
+
+  /*Repeat property*/
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
   gap: 10px;
 }
 .grid-item {
