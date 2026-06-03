@@ -1,0 +1,30 @@
+:root{
+    --background-color: #FFF9D2;
+    --primary-color: #FFEBCC;
+    --secondary-color: #BFDDF0;
+    --text-color: #8CC0EB;
+    --font-family: 'Arial', sans-serif;
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 20px;
+}
+.container{
+    width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.white{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+.black{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
