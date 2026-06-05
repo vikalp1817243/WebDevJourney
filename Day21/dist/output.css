@@ -14,9 +14,12 @@
     --color-indigo-500: oklch(58.5% 0.233 277.117);
     --color-slate-950: oklch(12.9% 0.042 264.695);
     --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-900: oklch(21% 0.034 264.665);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -186,8 +189,20 @@
   .mx-10 {
     margin-inline: calc(var(--spacing) * 10);
   }
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
   }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
@@ -201,11 +216,20 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .h-1 {
     height: calc(var(--spacing) * 1);
   }
   .h-14 {
     height: calc(var(--spacing) * 14);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
   }
   .h-44 {
     height: calc(var(--spacing) * 44);
@@ -213,8 +237,32 @@
   .h-auto {
     height: auto;
   }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
+  }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
   .w-4 {
     width: calc(var(--spacing) * 4);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-25 {
+    width: calc(var(--spacing) * 25);
+  }
+  .w-26 {
+    width: calc(var(--spacing) * 26);
+  }
+  .w-30 {
+    width: calc(var(--spacing) * 30);
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
+  .w-35 {
+    width: calc(var(--spacing) * 35);
   }
   .w-36 {
     width: calc(var(--spacing) * 36);
@@ -237,8 +285,14 @@
   .w-full {
     width: 100%;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -276,6 +330,10 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
   .border-b-4 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 4px;
@@ -288,6 +346,9 @@
   }
   .bg-blue-400 {
     background-color: var(--color-blue-400);
+  }
+  .bg-gray-900 {
+    background-color: var(--color-gray-900);
   }
   .bg-indigo-500 {
     background-color: var(--color-indigo-500);
@@ -310,6 +371,12 @@
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
   .text-center {
     text-align: center;
   }
@@ -324,6 +391,10 @@
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -349,6 +420,13 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .text-shadow-black {
     --tw-text-shadow-color: #000;
@@ -376,6 +454,16 @@
       display: none;
     }
   }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:px-12 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 12);
+    }
+  }
   .md\:text-4xl {
     @media (width >= 48rem) {
       font-size: var(--text-4xl);
@@ -401,6 +489,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-text-shadow-color {
   syntax: "*";
   inherits: false;
@@ -417,6 +510,7 @@
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-text-shadow-color: initial;
       --tw-text-shadow-alpha: 100%;
     }
