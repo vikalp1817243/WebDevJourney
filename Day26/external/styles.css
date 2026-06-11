@@ -1,0 +1,37 @@
+/* Your custom CSS handles only the movement */
+.custom-typing {
+    border-right: 3px solid black;
+    /* Cursor styling */
+    width: 0;
+    animation:
+        typing 2.5s steps(20, end) infinite alternate,
+        blink .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: red
+    }
+}
+.portfolio {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #020303;
+}
