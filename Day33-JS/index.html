@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice Playground</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#hero">DOM Playground</a>
+        <div class="nav-links">
+          <a class="nav-link" href="#counter-section">Counter</a>
+          <a class="nav-link" href="#task-section">Tasks</a>
+          <a class="nav-link" href="#form-section">Form</a>
+          <a class="nav-link" href="#activity-section">Activity</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Beginner DOM practice</p>
+          <h1 id="main-title">Learn the DOM by touching real elements</h1>
+          <p id="hero-description">
+            This page is intentionally built with ids, classes, buttons, inputs, lists,
+            and sections so you can practice selecting and changing elements with JavaScript.
+          </p>
+          <button id="hero-action" class="btn primary-btn" type="button">Start exploring</button>
+        </div>
+      </section>
+
+      <section class="dashboard" aria-label="Practice sections">
+        <article id="counter-section" class="panel counter-card">
+          <div class="panel-header">
+            <span class="badge">Counter</span>
+            <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle theme">Theme</button>
+          </div>
+          <h2>Counter controls</h2>
+          <p class="panel-copy">Use this area to practice click events and text updates.</p>
+          <div id="counter-card" class="counter-display">
+            <span id="counter-value">0</span>
+          </div>
+          <div class="button-row">
+            <button id="decrease-btn" class="btn secondary-btn" type="button">Decrease</button>
+            <button id="reset-btn" class="btn secondary-btn" type="button">Reset</button>
+            <button id="increase-btn" class="btn secondary-btn" type="button">Increase</button>
+          </div>
+          <p class="status-message">Counter status will appear here.</p>
+        </article>
+
+        <article id="profile-section" class="panel profile-card">
+          <span class="badge">Profile</span>
+          <img
+            id="profile-image"
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+            alt="Laptop showing code on a desk"
+          >
+          <h2 id="preview-name">Frontend Learner</h2>
+          <p id="preview-topic">Practicing DOM selection and updates</p>
+        </article>
+
+        <article id="task-section" class="panel task-panel">
+          <span class="badge">Tasks</span>
+          <h2>Task list</h2>
+          <p class="panel-copy">Use this area to practice creating, updating, and removing elements.</p>
+          <div class="task-entry">
+            <label for="task-input">New task</label>
+            <div class="input-action">
+              <input id="task-input" type="text" placeholder="Write a DOM practice task">
+              <button id="add-task" class="btn primary-btn" type="button">Add task</button>
+            </div>
+          </div>
+          <ul id="task-list" class="task-list">
+            <li class="task-item">Select the main title</li>
+            <li class="task-item">Change the counter text</li>
+            <li class="task-item">Read a form input value</li>
+          </ul>
+        </article>
+
+        <article id="form-section" class="panel form-panel">
+          <span class="badge">Form</span>
+          <h2>Contact form</h2>
+          <p class="panel-copy">Use this area to practice form values, validation, and submit events.</p>
+          <form id="contact-form">
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="name-input">Name</label>
+                <input id="name-input" name="name" type="text" placeholder="Your name">
+              </div>
+              <div class="form-row">
+                <label for="email-input">Email</label>
+                <input id="email-input" name="email" type="email" placeholder="you@example.com">
+              </div>
+              <div class="form-row">
+                <label for="topic-select">Topic</label>
+                <select id="topic-select" name="topic">
+                  <option value="">Choose a topic</option>
+                  <option value="selectors">DOM selectors</option>
+                  <option value="events">Events</option>
+                  <option value="forms">Forms</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="message-input">Message</label>
+                <textarea id="message-input" name="message" rows="4" placeholder="Write a short message"></textarea>
+              </div>
+            </div>
+            <label class="checkbox-row" for="agree-checkbox">
+              <input id="agree-checkbox" name="agreement" type="checkbox">
+              <span>I want to practice DOM forms.</span>
+            </label>
+            <div class="button-row">
+              <button id="submit-form" class="btn primary-btn" type="submit">Submit form</button>
+              <button id="clear-form" class="btn secondary-btn" type="button">Clear form</button>
+            </div>
+          </form>
+        </article>
+
+        <article id="activity-section" class="panel activity-panel">
+          <span class="badge">Activity</span>
+          <h2>Activity log</h2>
+          <p class="panel-copy">Use this area to practice adding messages to a list.</p>
+          <ol id="activity-log" class="activity-log">
+            <li class="log-item">Page loaded with HTML and CSS only.</li>
+            <li class="log-item">JavaScript practice can be added later.</li>
+          </ol>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
