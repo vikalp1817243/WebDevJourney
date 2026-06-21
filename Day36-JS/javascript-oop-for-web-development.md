@@ -82,7 +82,7 @@ keyboard.showPrice();
 mouse.showPrice();
 ```
 
-Use a class when you need to create many objects with the same structure and behavior.
+Use a class only when you need to create many objects with the same structure and behavior.
 
 ## Constructor
 
@@ -99,7 +99,7 @@ class User {
 const user1 = new User("Asha", "asha@example.com");
 ```
 
-Use the constructor to set the starting values of an object.
+Use the constructor to set the starting/default values of an object.
 
 ## The `this` Keyword
 
