@@ -162,3 +162,41 @@ Imagine a social media app:
 - PUT /posts/1 → replace the whole post
 - PATCH /posts/1 → change only the title
 - DELETE /posts/1 → delete the post
+
+---
+
+## 10. HTTP Response Status Codes
+
+When the server responds, it also sends a status code. This tells the client if the request worked or if there was an error.
+
+### Common status codes
+
+- 200 OK → the request was successful
+- 201 Created → something new was created successfully
+- 204 No Content → success, but there is no response body
+- 400 Bad Request → the request is invalid
+- 401 Unauthorized → the user is not logged in or not allowed
+- 403 Forbidden → the user is not allowed to access this resource
+- 404 Not Found → the resource does not exist
+- 500 Internal Server Error → something went wrong on the server
+
+### Status code ranges
+
+- 1xx → Informational: the request is being processed
+- 2xx → Successful: the request worked
+- 3xx → Redirection: the client needs to go somewhere else
+- 4xx → Client error: the client sent a bad or unauthorized request
+- 5xx → Server error: the server failed to process the request
+
+### Example in Express
+```js
+app.get('/home', (req, res) => {
+  res.status(200).send('Success');
+});
+```
+
+### Beginner tip
+A simple rule:
+- 2xx = success
+- 4xx = client error
+- 5xx = server error
