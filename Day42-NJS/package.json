@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "inquirer": "^14.0.2",
+    "qr-image": "^3.2.0"
+  },
+  "name": "qr-images-gen",
+  "version": "1.0.0",
+  "description": "An image generator for the provided urls",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vikalp",
+  "license": "ISC"
+}
