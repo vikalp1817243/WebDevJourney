@@ -5,63 +5,222 @@
     --accent-color: #faedcdff; /* Accent color */
     --dark-accent: #d4a373ff; /* Text/Dark accent */
 }
+
+/* Particle Canvas */
+#particles-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
 body{
     background-color: var(--light-background);
     color: var(--dark-accent);
     font-family: Monospace, serif;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
-header{
-    color: var(--dark-accent);
-    padding: 20px;
+.header-content{
+    display: flex;
+    border: #ccd5aeff 1px solid ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(233, 237, 201, 0.05);
+    position: relative;
+    z-index: 1;
 }
-header h1{
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 30px;
+.header-content h1{
+    margin-left: 10px;
 }
-header nav {
-    display: inline-block;
-    vertical-align: middle;
+.header-content nav{
+    display: flex;
+    gap: 20px;
+    margin-right: 10px;
 }
-section{
-    background-color: var(--secondary-color);
+
+
+.hero{
+    background-color: rgba(233, 237, 201, 0.05);
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
-.hero img{
-    float: left;
-    width: 12%;
-    height: auto;
-    border-radius: 10px;
+
+/* Hero Section */
+.hero-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 0;
 }
+
+.hero-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-intro{
+    margin-bottom: 20px;
+}
+
+.greeting{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: slideInLeft 0.8s ease-in-out;
+}
+
+.name{
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+    animation: slideInLeft 1s ease-in-out 0.2s both;
+}
+
+.role{
+    font-size: 1.8rem;
+    margin: 0;
+    color: #d4a373ff;
+    animation: slideInLeft 1.2s ease-in-out 0.4s both;
+}
+
 .bio{
-    height: auto;
-    padding: 10px;
-    margin-left: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 20px 0 0 0;
+    padding: 0;
+    max-width: 550px;
+    animation: fadeIn 1.4s ease-in-out 0.6s both;
 }
-.projects{
-    clear:both;
+
+.hero-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 50px;
 }
-.cards{
-    display: inline-block;
-    background-color: var(--accent-color);
-    margin-bottom: 20px;
-    padding: 10px;
+
+.profile-pic{
+    width: 600px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: zoomIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.projects-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-card{
+    background-color: rgba(250, 237, 205, 0.05);
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 48%;
     height: auto;
 }
+
+.project-card:nth-child(odd){
+    align-self: flex-start;
+}
+
+.project-card:nth-child(even){
+    align-self: flex-end;
+}
+
+.project-card h3{
+    margin-top: 0;
+    color: #d4a373ff;
+}
+
+.project-card p{
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.projects{
+    background-color: rgba(233, 237, 201, 0.05) !important;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.skills{
+    background-color: rgba(233, 237, 201, 0.05) !important;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
 li{
     display: inline;
     margin-right: 10px;
 }
 
 footer{
-    background-color: var(--secondary-color);
+    background-color: rgba(233, 237, 201, 0.05);
     text-align: center;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
 }
