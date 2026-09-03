@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <h1>Create Blog post</h1>
+
+<form name="blog-post" method="post">
+    <% for (var i in clubreq){%>
+        Club Name:<%= clubreq[i].clubname %><br><br>//I want to access this variable in my app.post() function
+        Club Type:<%= clubreq[i].type %><br><br>
+        <input type="submit" value="accept"/><br><br><hr>
+    <%} %>
+</form>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
