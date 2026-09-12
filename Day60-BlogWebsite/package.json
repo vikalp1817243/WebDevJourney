@@ -1,0 +1,21 @@
+{
+  "name": "blogwebsite",
+  "version": "1.0.0",
+  "description": "A space for every kind of users to create, share, update their life journey in blog format",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./backend/server.js",
+    "dev": "nodemon ./backend/server.js",
+    "custom-task": "node ./scripts/utility.js"
+  },
+  "author": "Vikalp Pratap Yadav",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "i": "^0.3.7",
+    "nodemon": "^3.1.14",
+    "url": "^0.11.4"
+  }
+}
